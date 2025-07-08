@@ -15,6 +15,8 @@
     <link rel="stylesheet" href="lib/framework7-bundle.min.css">
     <!-- CSS PERSONALIZADO PARA MENU-->
     <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/detalhes.css">
+    <link rel="stylesheet" href="css/carrinho.css">
     <!--Ícones Material Design-->
     <link rel="stylesheet" href="css/materialdesignicons.min.css">
     <!--Ícones do Remix Icon-->
@@ -59,7 +61,7 @@
                 <!-- Top Navbar -->
                 <div class="top-nav">
                     <h1 class="title-logo"><span>Franco</span>Tech</h1>
-                    <a href="#" class="btn-cart" data-count="1">
+                    <a href="/carrinho/" class="btn-cart" data-count="1">
                         <i class="ri-shopping-bag-line"></i>
                     </a>
                 </div>
@@ -101,7 +103,7 @@
                                         <button class="filter-btn active">Todas</button>
                                     </div>
                                     <div class="swiper-slide">
-                                        <button class="filter-btn active">Smartphone</button>
+                                        <button class="filter-btn">Smartphone</button>
                                     </div>
                                     <div class="swiper-slide">
                                         <button class="filter-btn">Notebook</button>
@@ -133,7 +135,7 @@
                                     <!-- ITEM CARD -->
                                 
                                     <div class="item-card">
-                                        <a href="#" class="item">
+                                        <a href="/detalhes/" class="item">
                                             <div class="img-container">
                                                 <img  src="img/airpod.png" alt="">
                                             </div>
@@ -208,7 +210,6 @@
 	<script type="text/javascript" src="lib/jquery-3.7.0.min.js"></script>	
     <!-- Roteamento do app-->
     <script type="text/javascript" src="js/routes.js"></script>
-    <script src="cordova.js"></script>
 </body>
 
 </html>

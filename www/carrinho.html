@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Required meta tags-->
+    <meta charset="utf-8">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, viewport-fit=cover">
+    <meta name="mobile-web-app-capable"  content="yes">
+    <!-- Color theme for statusbar (Android only) -->
+    <meta name="theme-color" content="#2196f3">
+    <!-- Your app title -->
+    <title>Template Tab</title>
+    <!-- Path to Framework7 Library Bundle CSS -->
+    <link rel="stylesheet" href="lib/framework7-bundle.min.css">
+    <!-- CSS PERSONALIZADO PARA MENU-->
+    <link rel="stylesheet" href="css/carrinho.css">
+    <link rel="stylesheet" href="css/index.css">
+    <!--Ícones Material Design-->
+    <link rel="stylesheet" href="css/materialdesignicons.min.css">
+    <!--Ícones do Remix Icon-->
+    <link rel="stylesheet" href="css/remixicon/remixicon.css">
+
+
+</head>
+
+<body>
+    <!-- App root element -->
+    <div id="app">
+
+        <!-- Your main view, should have "view-main" class -->
+        <div class="view view-main">
+
+            
+            <!-- Initial Page, "data-name" contains page name -->
+            <div data-name="carrinho" class="page color-theme-blue">
+                <!-- NAV BAR-->
+
+                <div class="nav-top cart">
+
+                    <a href="/index/"><i class="ri-arrow-left-double-line"></i></a>
+                    <strong>Carrinho <i class="ri-shopping-cart-line"></i></strong>
+                    <a data-popover=".popover-menu" class="link popover-open" href="#"><i class="ri-more-fill"></i></i></a>
+                
+                </div>
+                <div class="popover popover-menu">
+                    <div class="popover-angle"></div>
+                    <div class="popover-inner">
+                        <div class="list">
+                            <ul>
+                                <li>
+                                    <a id="esvaziar" href="#" class="list-button popover-close">
+                                    <i class="mdi mdi-broom"></i>
+                                    Esvaziar Carrinho
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- TAB BAR-->
+                <div  style=" margin-bottom: 110px;" class="toolbar toolbar-bottom">
+                    <div id="totais" class="toolbar-inner display-flex align-items-center justify-content-center">
+                        <div class="margin-top bd-bottom w-80 display-flex justify-content-space-between">
+                            <span>Subtotal:</span>
+                            <span class="bold">R$ 800</span>
+                        </div>
+                        <div class="w-80 display-flex justify-content-space-between">
+                            <span>frete:</span>
+                            <span class="bold">R$ 10</span>
+                        </div>
+                    </div>
+                </div>            
+                <div  class="toolbar toolbar-bottom">
+                    <div class="toolbar-inner display-flex align-items-center justify-content-center">
+                        <div class="flex-100">
+                            <button class="add-cart">Comprar</button>
+                        </div>
+                    </div>
+                </div>            
+
+                <!-- Scrollable page content -->
+                <div class="page-content">
+                    <div id="lista-carrinho">
+                        <!-- ITEM DO CARRINHO -->
+                        <div class="item-carrinho">
+                            <div class="area-img">
+                                <img src="img/default.png" alt="">
+                            </div>
+                            <div class="area-details">
+                                <div class="sup">
+                                    <span class="nome-prod">Xbox Series X</span>
+                                    <a class="delete-item" href="#">
+                                        <i class="mdi mdi-close"></i>
+                                    </a>
+                                </div>
+                                <div class="middle">
+                                    <span>1tb</span>
+                                </div>
+                                <div class="preco-quantidade">
+                                    <span>R$ 4000 </span>
+                                    <div class="count">
+                                        <a href="#" class="minus">-</a>
+                                        <input readonly class="qtd-item" type="text" value="1">
+                                        <a href="#" class="plus">+</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item-carrinho">
+                            <div class="area-img">
+                                <img src="img/default.png" alt="">
+                            </div>
+                            <div class="area-details">
+                                <div class="sup">
+                                    <span class="nome-prod">Xbox Series X</span>
+                                    <a class="delete-item" href="#">
+                                        <i class="mdi mdi-close"></i>
+                                    </a>
+                                </div>
+                                <div class="middle">
+                                    <span>1tb</span>
+                                </div>
+                                <div class="preco-quantidade">
+                                    <span>R$ 4000 </span>
+                                    <div class="count">
+                                        <a href="#" class="minus">-</a>
+                                        <input readonly class="qtd-item" type="text" value="1">
+                                        <a href="#" class="plus">+</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Path to Framework7 Library Bundle JS-->
+    <script type="text/javascript" src="lib/framework7-bundle.min.js"></script>
+	<!-- jQuery -->
+	<script type="text/javascript" src="lib/jquery-3.7.0.min.js"></script>	
+    <!-- Roteamento do app-->
+    <script type="text/javascript" src="js/routes.js"></script>
+</body>
+
+</html>

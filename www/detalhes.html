@@ -31,47 +31,57 @@
         <!-- Your main view, should have "view-main" class -->
         <div class="view view-main">
 
-            <!-- TAB BAR-->
-            <div id="menu-principal" class="toolbar toolbar-bottom">
-                <div class="toolbar-inner display-flex">
-                    <a href="/index/" class="tab-link link active">
-                        <i class="ri-home-4-fill"></i>
-                        <span>Home</span>
-                    </a>
-                    <a href="/link2/" class="tab-link link">
-                        <i class="ri-search-line"></i>
-                        <span>Busca</span>
-                    </a>
-                    <a href="/link3/" class="tab-link link">
-                        <i class="ri-heart-3-line"></i>
-                        <span>Favoritos</span>
-                    </a>
-                    <a href="/link4/" class="tab-link link">
-                        <i class="ri-user-line"></i>
-                        <span>Usuário</span>
-                    </a>
-
-                </div>
-            </div>
-
+            
             <!-- Initial Page, "data-name" contains page name -->
-            <div data-name="index" class="page color-theme-blue">
-
-                <!-- Top Navbar -->
-                <div class="top-nav">
-                    <h1 class="title-logo"><span>Franco</span>Tech</h1>
-                    <a href="#" class="btn-cart" data-count="1">
-                        <i class="ri-shopping-bag-line"></i>
-                    </a>
-                </div>
-                <form action="">
-                    <input type="text" placeholder="O que voce procura">
-                    <i class="ri-search-line icone-busca"></i>
-                </form>
+            <div data-name="detalhes" class="page color-theme-blue">
+                <!-- TAB BAR-->
+                <div  class="toolbar toolbar-bottom">
+                    <div class="toolbar-inner display-flex align-items-center justify-content-center">
+                        <div class="flex-40 ">
+                            <span class="riscado">R$ 1400</span>
+                            <h3 class="princing no-padding no-margin">R$ 1200</h3>
+                        </div>
+                       <div class="flex-60"><button class="add-cart">adicionar ao Carrinho</button></div>
+                    </div>
+                </div>            
 
                 <!-- Scrollable page content -->
                 <div class="page-content">
-                    <div class="container">ola</div>
+                    <div class="prod-detail">
+                        <div class="buttons-top">
+                            <a href="/index/"><i class="ri-arrow-left-double-line"></i></a>
+                            <a href="#"><i class="ri-heart-3-line"></i></a>
+                            <a href="#"><i class="ri-share-line"></i></a>
+                        </div>
+                        <img src="img/iphone.png" alt="">
+                    </div>
+                    <div class="pro-content">
+                        <div class="block">
+                            <div class="line">
+                                <b>Nome do Produto</b>
+                                <button class="promo-btn">Promoção</button>
+                            </div>
+                            <div class="itens">
+                                <button class="btn-rates"><i class="mdi mdi-star"></i> 4.8</button>
+                                <button class="btn-rates"><i class="ri-thumb-up-fill"></i>  90%</button>
+                                <span>110 Reviews</span>
+                            </div>
+                            <div class="descricao">
+                                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quo adipisci reiciendis molestias ullam excepturi dolorem rem voluptatem, asperiores velit! Quasi vitae nesciunt reiciendis corrupti.
+                                     Consequatur placeat tempore impedit suscipit illo.</p>
+                            </div>
+                            <table>
+                                <tr>
+                                    <th>Características</th>
+                                    <th>Detalhes</th>
+                                </tr>
+                                <tr>
+                                    <td>detalhe 1</td>
+                                    <td>detalhe 2</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -82,7 +92,6 @@
 	<script type="text/javascript" src="lib/jquery-3.7.0.min.js"></script>	
     <!-- Roteamento do app-->
     <script type="text/javascript" src="js/routes.js"></script>
-    <script src="cordova.js"></script>
 </body>
 
 </html>

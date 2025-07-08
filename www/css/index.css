@@ -166,6 +166,11 @@ input[type='text']{
     overflow: hidden;
     text-overflow: ellipsis;
 }
+.filter-btn.active{
+    background-color: var(--verde);
+    color: var(--branco);
+    border: none;
+}
 
 .row{
     flex-direction: row;
