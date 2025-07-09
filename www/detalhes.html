@@ -38,8 +38,8 @@
                 <div  class="toolbar toolbar-bottom">
                     <div class="toolbar-inner display-flex align-items-center justify-content-center">
                         <div class="flex-40 ">
-                            <span class="riscado">R$ 1400</span>
-                            <h3 class="princing no-padding no-margin">R$ 1200</h3>
+                            <span id="preco-detalhe" class="riscado">R$ 1400</span>
+                            <h3 id="precopromo-detalhe" class="princing no-padding no-margin">R$ 1200</h3>
                         </div>
                        <div class="flex-60"><button class="add-cart">adicionar ao Carrinho</button></div>
                     </div>
@@ -53,32 +53,29 @@
                             <a href="#"><i class="ri-heart-3-line"></i></a>
                             <a href="#"><i class="ri-share-line"></i></a>
                         </div>
-                        <img src="img/iphone.png" alt="">
+                        <img id="imagem-detalhe" src="img/iphone.png" alt="">
                     </div>
                     <div class="pro-content">
                         <div class="block">
                             <div class="line">
-                                <b>Nome do Produto</b>
+                                <b id="nome-detalhe">Nome do Produto</b>
                                 <button class="promo-btn">Promoção</button>
                             </div>
                             <div class="itens">
-                                <button class="btn-rates"><i class="mdi mdi-star"></i> 4.8</button>
-                                <button class="btn-rates"><i class="ri-thumb-up-fill"></i>  90%</button>
-                                <span>110 Reviews</span>
+                                <button class="btn-rates"><i class="mdi mdi-star"></i><span id="rating-detalhe"> 4.8</span></button>
+                                <button class="btn-rates"><i class="ri-thumb-up-fill"></i>  <span id="like-detalhe">90%</span></button>
+                                <span id="reviews-detalhe">110 Reviews</span>
                             </div>
-                            <div class="descricao">
+                            <div id="descricao-detalhe" class="descricao">
                                 <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quo adipisci reiciendis molestias ullam excepturi dolorem rem voluptatem, asperiores velit! Quasi vitae nesciunt reiciendis corrupti.
                                      Consequatur placeat tempore impedit suscipit illo.</p>
                             </div>
-                            <table>
+                            <table id="tab-detalhes">
                                 <tr>
                                     <th>Características</th>
                                     <th>Detalhes</th>
                                 </tr>
-                                <tr>
-                                    <td>detalhe 1</td>
-                                    <td>detalhe 2</td>
-                                </tr>
+                                
                             </table>
                         </div>
                     </div>

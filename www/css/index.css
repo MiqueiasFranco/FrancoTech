@@ -215,6 +215,10 @@ input[type='text']{
  color: gray;
 }
 
+.gelo{
+    background: var(--gelo) !important;
+}
+
 .mdi-star {
     color: orange;
 }
