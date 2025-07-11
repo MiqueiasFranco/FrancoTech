@@ -3,7 +3,6 @@ fetch('js/backend.json')
 .then(data =>{
     //salvar os dados do backend localmente (localstorage)
     localStorage.setItem('produtos',JSON.stringify(data))
-    console.log('dados dos produtos salvos')
 
     //ESVAZIAR A AREA DE PRODUTOS
     setTimeout(()=>{
@@ -42,7 +41,7 @@ fetch('js/backend.json')
 // ver quantos itens tem dentro do carrinho
 
 setTimeout(() => {
-    var carrinho = JSON.parse(localStorage.getItem('carrinho'))
+    var carrinho = JSON.parse(localStorage.getItem('carrinho')) || []
 
     //alimentar o contador da sacola
     $('.btn-cart').attr('data-count', carrinho.length)

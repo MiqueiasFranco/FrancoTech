@@ -44,8 +44,9 @@
     width: 90%;
     height: 120px;
     margin: auto;
+    margin-bottom: 5px;
     padding-bottom: 5px;
-    border-bottom: var(--gelo);
+    border-bottom: 1px solid var(--gelo) ;
 }
 
 .area-img{
@@ -56,12 +57,14 @@
     justify-content: center;
     background-color: var(--gelo);
     border-radius: 20px;
+    
 }
 
 .area-img img{
     max-width: 120px;
     height: 120px;
     object-fit: contain;
+  
 }
 
 .area-details{
@@ -126,9 +129,10 @@
     font-size: 15px;
 }
 
-.count input{
+.qtd-item{
     color: black;
     font-weight: 800;
+    max-width: 30px;
     background-color: var(--branco);
     text-align: center;
     padding: 0;
@@ -139,8 +143,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 40%;
-    height: 40%;
+    width: 30px;
+    height: 30px;
     color: gray;
     background-color: var(--branco);
     border: 1px solid var(--gelo);
@@ -150,8 +154,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 40%;
-    height: 40%;
+    width: 30px;
+    height: 30px;
     color: var(--verde);
     background-color: var(--branco);
     border: 1px solid var(--verde);

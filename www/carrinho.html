@@ -61,11 +61,11 @@
 
 
                 <!-- TAB BAR-->
-                <div  style=" margin-bottom: 110px;" class="toolbar toolbar-bottom">
+                <div id="toolbar-totais"  style=" margin-bottom: 110px;" class="toolbar toolbar-bottom">
                     <div id="totais" class="toolbar-inner display-flex align-items-center justify-content-center">
                         <div class="margin-top bd-bottom w-80 display-flex justify-content-space-between">
-                            <span>Subtotal:</span>
-                            <span class="bold">R$ 800</span>
+                            <span >Subtotal:</span>
+                            <span id="subtotal" class="bold">R$ 800</span>
                         </div>
                         <div class="w-80 display-flex justify-content-space-between">
                             <span>frete:</span>
@@ -73,7 +73,7 @@
                         </div>
                     </div>
                 </div>            
-                <div  class="toolbar toolbar-bottom">
+                <div id="toolbar-checkout"  class="toolbar toolbar-bottom">
                     <div class="toolbar-inner display-flex align-items-center justify-content-center">
                         <div class="flex-100">
                             <button class="add-cart">Comprar</button>
@@ -93,7 +93,7 @@
                                 <div class="sup">
                                     <span class="nome-prod">Xbox Series X</span>
                                     <a class="delete-item" href="#">
-                                        <i class="mdi mdi-close"></i>
+                                        <i style="color: red;" class="mdi mdi-close"></i>
                                     </a>
                                 </div>
                                 <div class="middle">
@@ -102,37 +102,15 @@
                                 <div class="preco-quantidade">
                                     <span>R$ 4000 </span>
                                     <div class="count">
-                                        <a href="#" class="minus">-</a>
+                                        <a href="#" class="minus"><i class="mdi mdi-minus"></i></a>
                                         <input readonly class="qtd-item" type="text" value="1">
-                                        <a href="#" class="plus">+</a>
+                                        <a href="#" class="plus"><i class="mdi mdi-plus"></i></a>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="item-carrinho">
-                            <div class="area-img">
-                                <img src="img/default.png" alt="">
-                            </div>
-                            <div class="area-details">
-                                <div class="sup">
-                                    <span class="nome-prod">Xbox Series X</span>
-                                    <a class="delete-item" href="#">
-                                        <i class="mdi mdi-close"></i>
-                                    </a>
-                                </div>
-                                <div class="middle">
-                                    <span>1tb</span>
-                                </div>
-                                <div class="preco-quantidade">
-                                    <span>R$ 4000 </span>
-                                    <div class="count">
-                                        <a href="#" class="minus">-</a>
-                                        <input readonly class="qtd-item" type="text" value="1">
-                                        <a href="#" class="plus">+</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        
+                        
 
                     </div>
                 </div>
