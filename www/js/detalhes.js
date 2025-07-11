@@ -35,6 +35,7 @@ else{
 }
 
 var carrinho =JSON.parse(localStorage.getItem('carrinho')) || []
+var favoritos =JSON.parse(localStorage.getItem('favoritos')) || []
 
 //funcao para adicionar ao carrinho
 function adicionarAoCarrinho(item, quantidade){
@@ -51,6 +52,29 @@ function adicionarAoCarrinho(item, quantidade){
             item:item,
             quantidade:quantidade,
             total_item: quantidade * item.preco_promocional
+        })
+    }
+
+    //atualizar o localstorage do carrinho
+    localStorage.setItem('carrinho', JSON.stringify(carrinho))
+}
+
+
+
+function adicionarAosFavoritos(item){
+    var itemFavorito = favoritos.find(c=> c.item.id === id)
+    if(itemFavorito){
+        // ja tem o item no carrinho
+        var toastCenter = app.toast.create({
+          text: `${item.nome} adicionado aos favoritos`,
+          position: 'center',
+          closeTimeout: 2000,
+        });
+        toastCenter.open()
+    }
+    else{
+        favoritos.push({
+            item:item,
         })
     }
 

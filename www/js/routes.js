@@ -35,7 +35,7 @@ var app = new Framework7({
 		pageInit: function (event, page) {
 		// fazer algo quando a página for inicializada
 
-      app.views.main.router.navigate('/carrinho/');
+      app.views.main.router.navigate('/favoritos/');
 
       $.getScript('js/index.js');
       var swiper = new Swiper(".mySwiper", {
@@ -114,18 +114,23 @@ var app = new Framework7({
 	  }
     },
     {
-      path: '/link3/',
-      url: 'link3.html',
-      animate: false,
+      path: '/favoritos/',
+      url: 'favoritos.html',
+      options: {
+          transition: 'f7-push',
+      },
 	  on: {
 		pageBeforeIn: function (event, page) {
 		// fazer algo antes da página ser exibida
+      $("#menu-principal").hide('fast')
+
 		},
 		pageAfterIn: function (event, page) {
 		// fazer algo depois da página ser exibida
 		},
 		pageInit: function (event, page) {
 		// fazer algo quando a página for inicializada
+      $.getScript('js/favoritos.js');
 		},
 		pageBeforeRemove: function (event, page) {
 		// fazer algo antes da página ser removida do DOM

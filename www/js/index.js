@@ -46,3 +46,8 @@ setTimeout(() => {
     //alimentar o contador da sacola
     $('.btn-cart').attr('data-count', carrinho.length)
 }, 300);
+
+var favoritos = JSON.parse(localStorage.getItem('favoritos')) || []
+
+//alimentar o contador da sacola
+$('.favoritar').attr('data-count', favoritos.length)

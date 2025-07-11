@@ -1,6 +1,7 @@
 var localCarrinho = localStorage.getItem('carrinho')
 
 if(localCarrinho){
+    // SE HOUVER ALGO NO CARRINHO
     var carrinho = JSON.parse(localCarrinho)
     if(carrinho.length >0){
         // TEM ITENS NO CARRINHO
@@ -95,6 +96,7 @@ function rendeizarCarrinho(){
                     // ATUALIZAR O CARRINHO COM O ITEM REMOVIDO
                     localStorage.setItem('carrinho',JSON.stringify(carrinho))
                     // ATUALIZAR A PAGINA
+                    rendeizarCarrinho()    
                     calcularTotal()
             })
         }

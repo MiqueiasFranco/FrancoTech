@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Required meta tags-->
+    <meta charset="utf-8">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, viewport-fit=cover">
+    <meta name="mobile-web-app-capable"  content="yes">
+    <!-- Color theme for statusbar (Android only) -->
+    <meta name="theme-color" content="#2196f3">
+    <!-- Your app title -->
+    <title>favoritos</title>
+    <!-- Path to Framework7 Library Bundle CSS -->
+    <link rel="stylesheet" href="lib/framework7-bundle.min.css">
+    <!-- CSS PERSONALIZADO PARA MENU-->
+    <link rel="stylesheet" href="css/favoritos.css">
+    <!--Ícones Material Design-->
+    <link rel="stylesheet" href="css/materialdesignicons.min.css">
+    <!--Ícones do Remix Icon-->
+    <link rel="stylesheet" href="css/remixicon/remixicon.css">
+
+
+</head>
+
+<body>
+    <!-- App root element -->
+    <div id="app">
+
+        <!-- Your main view, should have "view-main" class -->
+        <div class="view view-main">
+
+            
+            <!-- Initial Page, "data-name" contains page name -->
+            <div data-name="favoritos" class="page color-theme-blue">
+                <!-- NAV BAR-->
+
+                <div class="nav-top favoritos">
+
+                    <a href="/index/"><i class="ri-arrow-left-double-line"></i></a>
+                    <strong class="nome" >favoritos <i class="mdi  mdi-heart"></i></strong>
+                
+                </div>
+                
+
+
+                <!-- TAB BAR-->
+                      
+
+                <!-- Scrollable page content -->
+                <div class="page-content">
+                    <div id="lista-carrinho">
+                        <!-- ITEM DO CARRINHO -->
+                        <div class="item-carrinho">
+                            <div class="area-img">
+                                <img src="img/default.png" alt="">
+                            </div>
+                            <div class="area-details">
+                                <div class="sup">
+                                    <span class="nome-prod">Xbox Series X</span>
+                                    <a class="delete-item" href="#">
+                                        <i style="color: red;" class="mdi mdi-close"></i>
+                                    </a>
+                                </div>
+                                <div class="middle">
+                                    <span>1tb</span>
+                                </div>
+                                
+                            </div>
+                        </div>
+                        
+                        
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Path to Framework7 Library Bundle JS-->
+    <script type="text/javascript" src="lib/framework7-bundle.min.js"></script>
+	<!-- jQuery -->
+	<script type="text/javascript" src="lib/jquery-3.7.0.min.js"></script>	
+    <!-- Roteamento do app-->
+    <script type="text/javascript" src="js/routes.js"></script>
+</body>
+
+</html>
