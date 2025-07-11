@@ -11,6 +11,7 @@ if(item){
     console.log('produto encontrado: ', item)
 
     //alimentar os campos
+    $('.favoritar').attr('id', item.id)
     $('#imagem-detalhe').attr('src', item.imagem)
     $('#nome-detalhe').html(item.nome)
     $('#rating-detalhe').html(item.rating)
@@ -35,7 +36,6 @@ else{
 }
 
 var carrinho =JSON.parse(localStorage.getItem('carrinho')) || []
-var favoritos =JSON.parse(localStorage.getItem('favoritos')) || []
 
 //funcao para adicionar ao carrinho
 function adicionarAoCarrinho(item, quantidade){
@@ -60,9 +60,10 @@ function adicionarAoCarrinho(item, quantidade){
 }
 
 
+var favoritos =JSON.parse(localStorage.getItem('favoritos')) || []
 
 function adicionarAosFavoritos(item){
-    var itemFavorito = favoritos.find(c=> c.item.id === id)
+    var itemFavorito = favoritos.find(f=> f.item.id === id)
     if(itemFavorito){
         // ja tem o item no carrinho
         var toastCenter = app.toast.create({
@@ -78,8 +79,8 @@ function adicionarAosFavoritos(item){
         })
     }
 
-    //atualizar o localstorage do carrinho
-    localStorage.setItem('carrinho', JSON.stringify(carrinho))
+    //atualizar o localstorage do favoritos
+    localStorage.setItem('favoritos', JSON.stringify(favoritos))
 
 }
 
@@ -88,6 +89,20 @@ $('.add-cart').on('click',function(){
     adicionarAoCarrinho(item,1)
     var toastCenter = app.toast.create({
           text: `${item.nome} adicionado ao carrinho`,
+          position: 'center',
+          closeTimeout: 2000,
+    });
+        
+    toastCenter.open()
+})
+
+$('.favoritar').on('click',function(){
+
+    var id = $(this).attr('id')
+
+    adicionarAosFavoritos(item)
+    var toastCenter = app.toast.create({
+          text: `${item.nome} adicionado ao favoritos`,
           position: 'center',
           closeTimeout: 2000,
     });

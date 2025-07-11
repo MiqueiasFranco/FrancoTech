@@ -47,7 +47,11 @@ setTimeout(() => {
     $('.btn-cart').attr('data-count', carrinho.length)
 }, 300);
 
-var favoritos = JSON.parse(localStorage.getItem('favoritos')) || []
 
-//alimentar o contador da sacola
-$('.favoritar').attr('data-count', favoritos.length)
+
+setTimeout(() => {
+    var favoritos = JSON.parse(localStorage.getItem('favoritos')) || []
+
+    //alimentar o contador da sacola
+    $('.favoritos').attr('data-count', favoritos.length)
+}, 300);
