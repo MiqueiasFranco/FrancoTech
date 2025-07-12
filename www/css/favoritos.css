@@ -13,23 +13,29 @@
 
 }
 
-.nav-top{
+.nav-top-favoritos{
     display: flex;
     width: 100%;
     align-items: center;
-    padding-top: 10px;    
+    padding-top: 5%;    
     justify-content: space-between;
     background-color: var(--branco);
 
 }
 
-.nav-top strong{
+.nav-top-favoritos strong{
     position: relative;
     right: 50%;
     transform: translateX(50%);
     font-size: .9rem;
 }
 
+.item-favorito{
+    display: flex;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid var(--gelo);
+}
 .area-details{
     display: flex;
     flex-direction: column;

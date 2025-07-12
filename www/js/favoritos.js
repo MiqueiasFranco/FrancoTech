@@ -16,9 +16,8 @@ function renderizarFavoritos(){
 
     $('#lista-favoritos').empty()
     $.each(favoritos, function(index, itemFavorito){
-        console.log(itemFavorito.quantidade)
         var itemDiv =  `
-            <div class="item-carrinho"  >
+            <div class="item-favorito"  >
                 <div class="area-img">
                     <img src="${itemFavorito.item.imagem}" alt="">
                 </div>
@@ -39,19 +38,32 @@ function renderizarFavoritos(){
         $('#lista-favoritos').append(itemDiv)
 
     })
-    $('.delete-item').on('click', function(){
+    $('.delete-item').on('click', function( ){
         var index = $(this).data('index')
         console.log(index)
+        
+    
         // CONFIRMAR
         app.dialog.confirm('Deseja remover este item?', 'Remover', function(){
-            // REMOVER DO CARRINHO
-            favoritos.splice(index, 1)
-            // ATUALIZAR O CARRINHO COM O ITEM REMOVIDO
-            localStorage.setItem('favoritos',JSON.stringify(favoritos))
-            // ATUALIZAR A PAGINA
+            
+            
+            if(favoritos.quantidade == 1){
+
+                // APAGAR LOCALSTORAGE DO FAVORITOS
+                localStorage.removeItem('favoritos')
+                app.views.main.router.refreshPage()
+                console.log('entrei')
+                
+            }
+            else{
+                favoritos.splice(index, 1)
+                localStorage.setItem('favoritos',JSON.stringify(favoritos))
+                renderizarFavoritos() 
+            }
 
         })
-        renderizarFavoritos()    
+        
+        
 
     })
 }
