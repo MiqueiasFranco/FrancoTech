@@ -180,3 +180,14 @@
 .bd-bottom{
     border-bottom: 1px solid var(--gelo);
 }
+
+
+@media (min-width:992px){
+    .area-img{
+        max-width:  15%;
+    }
+    .add-cart{
+        width: 30%;
+    }
+        
+}

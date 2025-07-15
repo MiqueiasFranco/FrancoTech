@@ -11,6 +11,8 @@
 
 body{
     font-family: 'Bebas Neue';
+    width: 90%;
+    margin: auto;
 }
 
 .toolbar{
@@ -269,6 +271,7 @@ form{
     .item-card{
         flex: 20%;
     }
+    
 }
 @media (min-width:1200px){
     .item-card{
